@@ -7,9 +7,9 @@ module.exports = {
         main: './client/main.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist'), // oupt 的 path 是一个绝对路径
         filename: '[name].js',
-        publicPath: ''
+        publicPath: '/'
     },
     module: {
         rules: [{
@@ -21,8 +21,8 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     'style-loader',
-                    'postcss-loader',
-                    'css-loader'
+                    'css-loader',
+                    'postcss-loader'
                 ]
             },
             {
@@ -36,11 +36,9 @@ module.exports = {
             }
         ]
     },
+    devtool: 'inline-source-map',
     plugins: [
-        new htmlWebpackPlugin({
-            title: '省心宝',
-            template: './client/index.html'
-        })
+        new htmlWebpackPlugin({template: './client/index.html'})
     ],
     devServer: {
         open: true,
