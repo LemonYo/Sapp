@@ -8,8 +8,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'), // oupt 的 path 是一个绝对路径
-        filename: '[name].js',
-        publicPath: '/'
+        filename: '[name].js'
     },
     module: {
         rules: [{

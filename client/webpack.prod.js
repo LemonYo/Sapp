@@ -10,7 +10,7 @@ module.exports = {
   output: {
     filename: '[name].[hash:8].js',
     path: path.resolve('./public/client'),
-    publicPath: '/public/client/'
+    publicPath: './'
   },
   module: {
     rules:  [
@@ -18,25 +18,15 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true
-            }
-          },
+          'css-loader',
           'postcss-loader'
         ]
       },
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true
-            }
-          },
+          MiniCssExtractPlugin.loader,
+          'css-loader',
           'postcss-loader',
           'sass-loader'
         ]
@@ -79,8 +69,7 @@ module.exports = {
     }),
     // 对于生产环境构建，建议从 bundle 中提取 CSS，以便之后可以并行加载 CSS/JS 资源。可以通过使用 mini-css-extract-plugin 来实现，在生产环境模式运行中提取 CSS。
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css'
+      filename: "app.[contenthash:8].css"
     })
   ]
 }

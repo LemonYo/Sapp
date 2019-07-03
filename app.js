@@ -16,8 +16,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use('/public', express.static(path.join(__dirname, 'public')))
 
-app.use('/', indexRouter);
+app.use('/client', indexRouter);
 app.use('/users', usersRouter);
 
 // 监听特定端口并且自动打开地址
