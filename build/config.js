@@ -1,4 +1,5 @@
 const os = require('os')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const ip = getIpAdress()
 
@@ -18,7 +19,33 @@ module.exports = {
   client: {
     port: 3086,
     publicPath: '',
-    devConfig: {},
+    devConfig: {
+      module: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: [
+              'vue-style-loader',
+              'css-loader',
+              'postcss-loader'
+            ]
+          },
+          {
+            test: /\.(scss|sass)$/,
+            use: [
+              'vue-style-loader',
+              'css-loader',
+              'postcss-loader',
+              'sass-loader'
+            ]
+          }
+        ]
+      },
+      plugins: [
+        // 请确保引入这个插件来施展魔法
+        new VueLoaderPlugin()
+      ]
+    },
     pordConfig: {}
   },
   server: {

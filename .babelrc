@@ -10,6 +10,11 @@
       "libraryName": "antd",
       "libraryDirectory": "lib",
       "style": true
-    }, "antd"]
+    }, "antd"],
+    ["import", {
+      "libraryName": "vant",
+      "libraryDirectory": "lib",
+      "style": true
+    }, "vant"]
   ]
 }

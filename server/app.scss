@@ -4,7 +4,57 @@
   background-color: #F0F2F5;
   overflow: hidden;
   display: flex;
-  min-width: 800px;
+  min-width: 960px;
+
+  .main-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .main-layout-content {
+    flex: 1;
+    position: relative;
+    padding-top: 64px;
+    height: 100%;
+  }
+
+  .main-layout-iframe {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .main-layout-iframe-scroll {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .main-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 64px;
+    background: #fff;
+    z-index: 9999999;
+    padding: 0;
+    box-shadow: rgba(0, 21, 41, 0.08) 0px 1px 4px;
+  }
+
+  .main-page-common-warp {
+    padding: 20px;
+
+    &.pure {
+      padding: 0 0 20px 0;
+    }
+
+    &.special {
+      padding: 0 20px 20px 20px;
+    }
+  }
 
   .main-footer {
     text-align: center;
@@ -68,4 +118,29 @@ ul,
 ul li {
   text-decoration: none;
   list-style: none;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-full-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

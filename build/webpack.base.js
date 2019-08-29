@@ -7,6 +7,10 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
@@ -38,5 +42,11 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    alias: {
+      // 'vue$': 'vue/dist/vue.esm.js' //内部为正则表达式  vue结尾的
+    },
+    extensions: ['.js', '.vue']
   }
 }

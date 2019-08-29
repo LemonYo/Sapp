@@ -1,0 +1,54 @@
+.app-module {
+  display: flex;
+
+  .app-left,
+  .app-center,
+  .app-right {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .app-left {
+    width: 300px;
+    background: #fff;
+
+    .menu-item {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .app-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .iframe-size {
+      text-align: center;
+      background: #000;
+
+      .ant-dropdown-link {
+        color: #fff;
+        padding: 5px 0;
+      }
+    }
+
+    .iframe-container {
+      background-color: #fff;
+      transition: all 0.2s;
+
+      iframe {
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  .app-right {
+    width: 350px;
+    background: #000;
+  }
+}

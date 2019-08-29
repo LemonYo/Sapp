@@ -1,0 +1,26 @@
+.dashboard-module {
+  .dashboard-header-warp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .header-user {
+      display: flex;
+      align-items: center;
+
+      .user-info {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .dashboard-module-content {
+    margin: 0 20px 20px 20px;
+  }
+
+  .gridStyle {
+    width: 33.33%;
+    padding: 24px;
+  }
+}
