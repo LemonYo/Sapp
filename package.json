@@ -23,7 +23,7 @@
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.11.1",
     "react-router-dom": "^5.0.1",
-    "vant": "^2.0.9",
+    "vant": "^2.1.8",
     "vue": "^2.6.10",
     "vue-router": "^3.0.7",
     "vuedraggable": "^2.23.0",
